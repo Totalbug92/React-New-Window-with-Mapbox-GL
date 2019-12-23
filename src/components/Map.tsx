@@ -1,7 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl';
+import { getAllUrlParams } from '../functions/getUrlParams';
+
+type UrlParams = {
+    broadcastChannel?: string,
+
+}
+
 
 export default function Map() {
+    const [broadcastChannel, setBroadcastChannel] = useState<BroadcastChannel>();
+
+
+    useEffect(() => {
+        const urlParams: UrlParams = getAllUrlParams()
+
+        if(urlParams.broadcastChannel){
+            setBroadcastChannel(new BroadcastChannel(urlParams.broadcastChannel))
+            if(broadcastChannel){
+                broadcastChannel.onmessage = (event: MessageEvent) => {
+                    console.log(event);
+                }
+            }
+        }
+    }, [broadcastChannel])
+    
 
     const MapToken = ReactMapboxGl({
         accessToken:

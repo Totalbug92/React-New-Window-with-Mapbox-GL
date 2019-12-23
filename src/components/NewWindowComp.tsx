@@ -21,7 +21,7 @@ export default function NewWindowComp() {
             <button onClick={openWindow}>{open ? 'Close window' : 'Open new Window'}</button>
             {open && 
             <NewWindow
-                url={'/map'}>
+                url={'/map?broadcastChannel=testServer'}>
                 
             </NewWindow>}
         </div>
