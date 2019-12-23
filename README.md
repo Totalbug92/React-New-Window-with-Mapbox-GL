@@ -2,16 +2,20 @@ Had some troubles using Mapbox gl (javascript) with react-new-window, as the map
 
 
 Dependencies:
-react-new-window https://www.npmjs.com/package/react-new-window?activeTab=readme
-broadcastChannel https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API
-react-map-gl https://uber.github.io/react-map-gl/#/
-react-routing 
+- react-new-window https://www.npmjs.com/package/react-new-window?activeTab=readme
+- broadcastChannel https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API
+- react-map-gl https://uber.github.io/react-map-gl/#/
+- react-routing 
 
 
 
 To test clone the project
-run 'npm install'
-run 'npm start'
+
+
+```
+npm install
+npm start
+```
 
 
 
