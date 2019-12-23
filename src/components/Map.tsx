@@ -6,9 +6,15 @@ type UrlParams = {
     broadcastChannel?: string,
 
 }
+interface test{
+
+}
+type Props = {
+    urlParams: React.ReactPropTypes,
+}
 
 
-export default function Map() {
+export default function Map(props: Props) {
     const [broadcastChannel, setBroadcastChannel] = useState<BroadcastChannel>();
 
 
