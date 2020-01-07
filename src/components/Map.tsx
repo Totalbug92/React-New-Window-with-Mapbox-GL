@@ -26,7 +26,6 @@ const urlParams: any = getAllUrlParams()
 
 export default function Map(props: Props) {
   const [broadcastChannel, setBroadcastChannel] = useState<BroadcastChannel>(new BroadcastChannel(urlParams.broadcastchannel));
-  // MAP gl folka suger, should be number[] not [number, number]
   const [lonLat, setLonLat] = useState<LonLan>([10.457327, 61.123414]);
 
   if(broadcastChannel){
@@ -41,7 +40,7 @@ export default function Map(props: Props) {
 
   const MapToken = ReactMapboxGl({
     accessToken:
-      'pk.eyJ1IjoidG90YWxidWciLCJhIjoiY2s0aTV0dWw0MWRhNDNmcm1oNDRrbGtiZiJ9.IW1srUTw4P6E-h9Torx_9Q'
+      '**INSERT MAPBOXGL MapToken HERE**'
   });
 
 
